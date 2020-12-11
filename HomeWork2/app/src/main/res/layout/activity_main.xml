@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        android:textColor="@color/text_title"
+        android:layout_marginTop="25dp"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextClock
+            android:id="@+id/textClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="491dp"
+            android:format12Hour="hh:mm"
+            android:format24Hour="EEEE, MMMM dd, yyyy h:mmaa"
+            />
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@id/editTextTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        android:src="@drawable/kakashi" />
+
+    <EditText
+        android:textCursorDrawable="@drawable/coursor"
+        android:backgroundTint="@color/text_title"
+        android:id="@+id/editTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/text_hint"
+        android:textAlignment="center"
+        android:hint="@string/title"
+        app:layout_constraintBottom_toTopOf="@id/buttonCreator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/buttonCreator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonText"
+        android:textColor="@color/text_title"
+        android:backgroundTint="@color/color_button"
+        android:layout_margin="30dp"
+        android:paddingBottom="30dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>
