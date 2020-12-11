@@ -16,7 +16,7 @@
         android:textColor="@color/text_title"
         android:layout_marginTop="25dp"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@id/imageView"
+        app:layout_constraintBottom_toTopOf="@id/frame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,29 +30,46 @@
             android:id="@+id/textClock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14dp"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="false"
             android:layout_marginStart="15dp"
             android:layout_marginTop="491dp"
             android:format12Hour="hh:mm"
             android:format24Hour="EEEE, MMMM dd, yyyy h:mmaa"
-            />
+            android:textSize="14dp" />
 
 
     </RelativeLayout>
 
 
-    <ImageView
-
-        android:id="@+id/imageView"
+    <FrameLayout
+        android:id="@+id/frame"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toTopOf="@id/editTextTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
-        android:src="@drawable/kakashi" />
+        android:maxHeight="@android:dimen/app_icon_size"
+        android:maxWidth="@android:dimen/app_icon_size"
+        android:layout_height="0dp">
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:src="@drawable/kakashi"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/itachi"
+            android:visibility="gone" />
+
+    </FrameLayout>
 
     <EditText
         android:textCursorDrawable="@drawable/coursor"
@@ -68,7 +85,7 @@
         app:layout_constraintBottom_toTopOf="@id/buttonCreator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/frame" />
 
     <Button
         android:id="@+id/buttonCreator"
