@@ -7,23 +7,25 @@
     android:background="@color/back"
     tools:context=".MainActivity">
 
-
-    <TextView
+    <include layout="@layout/title"
         android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/textview"
-        android:textColor="@color/text_title"
+        android:layout_width="wrap_content"
         android:layout_marginTop="25dp"
-        android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@id/frame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        app:layout_constraintEnd_toStartOf="@id/editTextTitle"
+        app:layout_constraintTop_toBottomOf="@id/frame"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
 
         <TextClock
@@ -33,11 +35,10 @@
             android:layout_alignParentTop="false"
             android:layout_alignParentEnd="false"
             android:layout_alignParentBottom="false"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="491dp"
+            android:textColor="@color/text_title"
             android:format12Hour="hh:mm"
             android:format24Hour="EEEE, MMMM dd, yyyy h:mmaa"
-            android:textSize="14dp" />
+            android:textSize="14sp" />
 
 
     </RelativeLayout>

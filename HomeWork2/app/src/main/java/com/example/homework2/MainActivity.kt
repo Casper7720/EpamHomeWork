@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        titleText = findViewById(R.id.textViewTitle)
+        titleText = findViewById(R.id.textTitle)
         editorText = findViewById(R.id.editTextTitle)
         buttonCreator = findViewById(R.id.buttonCreator)
         time = findViewById(R.id.textClock)
