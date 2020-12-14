@@ -91,12 +91,11 @@
     <Button
         android:id="@+id/buttonCreator"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:text="@string/buttonText"
         android:textColor="@color/text_title"
         android:backgroundTint="@color/color_button"
         android:layout_margin="30dp"
-        android:paddingBottom="30dp"
         android:textSize="24sp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
