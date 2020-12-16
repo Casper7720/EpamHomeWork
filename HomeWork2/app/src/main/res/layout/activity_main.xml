@@ -7,26 +7,26 @@
     android:background="@color/back"
     tools:context=".MainActivity">
 
-    <include layout="@layout/title"
+
+    <include
         android:id="@+id/textViewTitle"
-        android:layout_height="wrap_content"
+        layout="@layout/title"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         app:layout_constraintBottom_toTopOf="@id/frame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <RelativeLayout
-        app:layout_constraintEnd_toStartOf="@id/editTextTitle"
-        app:layout_constraintTop_toBottomOf="@id/frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
+        app:layout_constraintEnd_toStartOf="@id/editTextTitle"
+        app:layout_constraintTop_toBottomOf="@id/frame">
 
         <TextClock
             android:id="@+id/textClock"
@@ -35,9 +35,9 @@
             android:layout_alignParentTop="false"
             android:layout_alignParentEnd="false"
             android:layout_alignParentBottom="false"
-            android:textColor="@color/text_title"
             android:format12Hour="hh:mm"
             android:format24Hour="EEEE, MMMM dd, yyyy h:mmaa"
+            android:textColor="@color/text_title"
             android:textSize="14sp" />
 
 
@@ -47,42 +47,50 @@
     <FrameLayout
         android:id="@+id/frame"
         android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+        android:maxWidth="@android:dimen/app_icon_size"
+        android:maxHeight="@android:dimen/app_icon_size"
         app:layout_constraintBottom_toTopOf="@id/editTextTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
-        android:maxHeight="@android:dimen/app_icon_size"
-        android:maxWidth="@android:dimen/app_icon_size"
-        android:layout_height="0dp">
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle">
+
+
         <ImageView
+
             android:id="@+id/imageView1"
-            android:layout_width="match_parent"
-            android:src="@drawable/kakashi"
-            android:layout_height="match_parent" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/kakashi" />
+
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:scaleType="fitCenter"
             android:src="@drawable/itachi"
             android:visibility="gone" />
 
+
     </FrameLayout>
 
     <EditText
-        android:textCursorDrawable="@drawable/coursor"
-        android:backgroundTint="@color/text_title"
         android:id="@+id/editTextTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/text_title"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:textColorHint="@color/text_hint"
-        android:textAlignment="center"
         android:hint="@string/title"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/text_hint"
+        android:textColorHint="@color/text_hint"
+        android:textCursorDrawable="@drawable/coursor"
         app:layout_constraintBottom_toTopOf="@id/buttonCreator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,12 +100,12 @@
         android:id="@+id/buttonCreator"
         android:layout_width="0dp"
         android:layout_height="70dp"
-        android:text="@string/buttonText"
-        android:textColor="@color/text_title"
-        android:backgroundTint="@color/color_button"
         android:layout_margin="30dp"
-        android:textSize="24sp"
+        android:backgroundTint="@color/color_button"
+        android:text="@string/buttonText"
         android:textAlignment="center"
+        android:textColor="@color/text_title"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
