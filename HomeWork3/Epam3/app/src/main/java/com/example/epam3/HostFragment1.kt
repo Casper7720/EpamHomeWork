@@ -13,7 +13,7 @@ class HostFragment1 : Fragment(R.layout.activity_main) {
 
         val fragment1 = FirstFragment()
 
-        parentFragmentManager.beginTransaction().apply {
+        childFragmentManager.beginTransaction().apply {
 
             setReorderingAllowed(true)
             add(R.id.fragment_container_view_tag_first, fragment1)

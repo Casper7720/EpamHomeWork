@@ -12,10 +12,10 @@ class HostFragment2 : Fragment(R.layout.activity_main) {
 
         val fragment2 = SecondFragment()
 
-        parentFragmentManager.beginTransaction().apply {
+        childFragmentManager.beginTransaction().apply {
 
             setReorderingAllowed(true)
-            add(R.id.fragment_container_view_tag_second, fragment2)
+            add(R.id.fragment_container_view_tag_first, fragment2)
             addToBackStack(null)
 
             commit()

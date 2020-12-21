@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction().apply {
 
                 setReorderingAllowed(true)
-                add(fragment1, "FIRST")
-                add(fragment2, "SECOND")
+                add(R.id.fragment_container_view_tag_first, fragment2)
+                add(R.id.fragment_container_view_tag_first, fragment1)
                 setPrimaryNavigationFragment(fragment1)
                 hide(fragment2)
                 show(fragment1)
@@ -46,7 +46,6 @@ class MainActivity : AppCompatActivity() {
 
         buttonLeft.setOnClickListener {
 
-
             supportFragmentManager.beginTransaction().apply {
 
                 setPrimaryNavigationFragment(fragment1)
@@ -56,7 +55,6 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-
 
 
         buttonRight.setOnClickListener {
