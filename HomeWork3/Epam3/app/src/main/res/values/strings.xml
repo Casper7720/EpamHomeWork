@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Epam3</string>
+    <string name="left_button">Left</string>
+    <string name="right_button">Right</string>
+    <string name="zero_point">0</string>
+    <string name="text_title_first">This is first</string>
+</resources>
