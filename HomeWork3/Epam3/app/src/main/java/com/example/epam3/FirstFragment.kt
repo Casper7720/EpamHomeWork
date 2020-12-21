@@ -36,6 +36,7 @@ class FirstFragment : Fragment(R.layout.first_fragment) {
 
                 commit()
             }
+
         }
 
     }

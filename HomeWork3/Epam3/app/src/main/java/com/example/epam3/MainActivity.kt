@@ -3,6 +3,7 @@ package com.example.epam3
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.FragmentManager as FragmentManager1
 
@@ -22,8 +23,8 @@ class MainActivity : AppCompatActivity() {
         buttonRight = findViewById(R.id.buttonRight)
 
 
-        val fragment1 = FirstFragment()
-        val fragment2 = SecondFragment()
+        val fragment1 = HostFragment1()
+        val fragment2 = HostFragment2()
 
         if (savedInstanceState == null) {
 
@@ -31,12 +32,11 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction().apply {
 
                 setReorderingAllowed(true)
-                add(R.id.fragment_container_view_tag_first, fragment1)
-                add(R.id.fragment_container_view_tag_second, fragment2)
-                show(fragment1)
-                hide(fragment2)
-                addToBackStack(null)
+                add(fragment1, "FIRST")
+                add(fragment2, "SECOND")
                 setPrimaryNavigationFragment(fragment1)
+                hide(fragment2)
+                show(fragment1)
 
                 commit()
             }
@@ -46,10 +46,12 @@ class MainActivity : AppCompatActivity() {
 
         buttonLeft.setOnClickListener {
 
+
             supportFragmentManager.beginTransaction().apply {
+
                 setPrimaryNavigationFragment(fragment1)
-                show(fragment1)
                 hide(fragment2)
+                show(fragment1)
                 commit()
             }
 
@@ -60,11 +62,9 @@ class MainActivity : AppCompatActivity() {
         buttonRight.setOnClickListener {
 
             supportFragmentManager.beginTransaction().apply {
-
                 setPrimaryNavigationFragment(fragment2)
                 hide(fragment1)
                 show(fragment2)
-
                 commit()
             }
 
