@@ -1,19 +1,21 @@
-package com.example.epam3
+package com.example.epam3.Fragments
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.epam3.ArgumentManager
+import com.example.epam3.R
 import kotlinx.android.synthetic.main.second_fragment.*
 import kotlinx.android.synthetic.main.second_fragment.textView
 
 class SecondFragment : Fragment(R.layout.second_fragment) {
+    private var counterValue: Int = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val argumentManager = ArgumentManager()
-        val counterValue = argumentManager.getCounter(arguments)
+        counterValue = argumentManager.getCounter(arguments)
 
 
         textView.text = "$counterValue"
@@ -37,4 +39,5 @@ class SecondFragment : Fragment(R.layout.second_fragment) {
         }
 
     }
+
 }

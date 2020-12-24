@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e770f22e-24ba-48bd-b6cd-24d113dbc1cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/HomeWork3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Epam3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Epam3/app/src/main/res/layout/fragment_host.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epam3/app/src/main/java/com/example/epam3/FirstFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Epam3/app/src/main/java/com/example/epam3/Fragments/FirstFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epam3/app/src/main/java/com/example/epam3/HostFragment1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Epam3/app/src/main/java/com/example/epam3/Hosts/HostFragment1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epam3/app/src/main/java/com/example/epam3/HostFragment2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Epam3/app/src/main/java/com/example/epam3/Hosts/HostFragment2.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Epam3/app/src/main/java/com/example/epam3/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Epam3/app/src/main/java/com/example/epam3/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epam3/app/src/main/java/com/example/epam3/SecondFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Epam3/app/src/main/java/com/example/epam3/Fragments/SecondFragment.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +49,9 @@
       <screen x="0" y="0" width="1739" height="978" />
     </state>
     <state x="325" y="145" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1739.978@0.0.1739.978" timestamp="1608553943366" />
-    <state x="650" y="245" key="FileChooserDialogImpl" timestamp="1608553986560">
+    <state x="650" y="245" key="FileChooserDialogImpl" timestamp="1608812985642">
       <screen x="0" y="0" width="1739" height="978" />
     </state>
-    <state x="650" y="245" key="FileChooserDialogImpl/0.0.1739.978@0.0.1739.978" timestamp="1608553986560" />
+    <state x="650" y="245" key="FileChooserDialogImpl/0.0.1739.978@0.0.1739.978" timestamp="1608812985642" />
   </component>
 </project>
